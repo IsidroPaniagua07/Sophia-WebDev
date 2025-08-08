@@ -1,0 +1,479 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+/* Color Palette - ABC Fitness Studio */
+/* Crimson Bloom (#AC1724) - Primary font color */
+/* Color Contrast Compliance:
+   - Crimson Bloom (#AC1724) on Wellness Gray (#D3D3D3): 4.5:1 ratio (Meets WCAG AA standards)
+   - Crimson Bloom (#AC1724) on Endurance White (#FCFCFC): 7.2:1 ratio (Exceeds WCAG AAA standards)
+
+/* ABC Fitness Studio Color Palette */
+/* Nourish Navy (#001F3F): Professional, trustworthy foundation */
+/* Bootcamp Blue (#20458E): Energy and motivation */
+/* Pilates Purple (#634E99): Sophistication and mindfulness */
+/* Box Jump Blue (#155EBC): Dynamic contrast and movement */
+/* Wellness Gray (#D3D3D3): Balance and neutrality */
+*/
+
+/* Basic Reset and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Calibri, Arial, sans-serif;
+    line-height: 1.6;
+    color: #AC1724;
+}
+
+/* Header Styles */
+header {
+    background-color: #001F3F;
+    padding: 1rem 0;
+    border-bottom: 2px solid #20458E;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    background-color: #D3D3D3;
+    border-radius: 8px;
+    padding: 5px;
+    border: 2px solid #20458E;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D3D3D3;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 1px solid #20458E;
+    border-radius: 4px;
+    background-color: #001F3F;
+}
+
+nav a:hover {
+    background-color: #20458E;
+    color: #D3D3D3;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Typography Hierarchy */
+h1 {
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #AC1724;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #AC1724;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #AC1724;
+}
+
+h4, h5, h6 {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    color: #AC1724;
+}
+
+/* Body text uses Calibri */
+p, li, span, div {
+    font-family: Calibri, Arial, sans-serif;
+    color: #AC1724;
+}
+
+/* Navigation and buttons use Arial Bold for consistency */
+nav a, button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Form elements use Calibri for better readability */
+input, textarea, label {
+    font-family: Calibri, Arial, sans-serif;
+    color: #AC1724;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #D3D3D3;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #155EBC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.hero button:hover {
+    background-color: #20458E;
+}
+
+/* Service Grid */
+.service-grid, .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item, .program-item {
+    padding: 1.5rem;
+    border: 1px solid #634E99;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #D3D3D3;
+}
+
+.service-item:hover, .program-item:hover {
+    background-color: #634E99;
+    color: white;
+}
+
+/* Product Gallery */
+.cart-section {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.view-cart-btn {
+    padding: 0.5rem 1rem;
+    background-color: #20458E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-cart-btn:hover {
+    background-color: #155EBC;
+}
+
+/* Product Table Styles - Grid Layout */
+.product-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-table thead {
+    display: none; /* Hide table headers in grid view */
+}
+
+.product-table tbody {
+    display: contents;
+}
+
+.product-table tr {
+    display: flex;
+    flex-direction: column;
+    background-color: #D3D3D3;
+    border: 2px solid #634E99;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-table tr:hover {
+    background-color: #634E99;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-table td {
+    padding: 0.5rem 0;
+    border: none;
+    display: block;
+}
+
+.product-table td:first-child {
+    /* Product Image */
+    padding-bottom: 1rem;
+}
+
+.product-table td:nth-child(2) {
+    /* Product Name */
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #001F3F;
+    padding-bottom: 0.5rem;
+}
+
+.product-table td:nth-child(3) {
+    /* Description */
+    font-style: italic;
+    padding-bottom: 1rem;
+    min-height: 3rem;
+}
+
+.product-table td:nth-child(4) {
+    /* Price */
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #AC1724;
+    padding-bottom: 1rem;
+}
+
+.product-table td:last-child {
+    /* Action Button */
+    padding-top: 0.5rem;
+}
+
+.product-table tr:hover td:nth-child(2) {
+    color: white;
+}
+
+.product-table tr:hover td:nth-child(4) {
+    color: white;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #AC1724;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart {
+    padding: 0.5rem 1rem;
+    background-color: #155EBC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #20458E;
+}
+
+/* About Section */
+.about-section {
+    background-color: #D3D3D3;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 2px solid #634E99;
+}
+
+.business-hours ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.business-hours li {
+    padding: 0.25rem 0;
+}
+
+/* Contact Form */
+.contact-form-section {
+    background-color: #D3D3D3;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #634E99;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #AC1724;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background-color: #155EBC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #20458E;
+}
+
+/* Testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-item {
+    background-color: #D3D3D3;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #634E99;
+}
+
+.testimonial-item:hover {
+    background-color: #634E99;
+    color: white;
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item cite {
+    font-weight: bold;
+    color: #AC1724;
+}
+
+.community-content ul,
+.events-content ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.community-content li,
+.events-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #634E99;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #001F3F;
+    color: #D3D3D3;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #D3D3D3;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #20458E;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .service-grid,
+    .program-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-table {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .product-table tr {
+        padding: 1rem;
+    }
+    
+    .product-table td:nth-child(2) {
+        font-size: 1.1rem;
+    }
+    
+    .product-table td:nth-child(4) {
+        font-size: 1.2rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+} 
